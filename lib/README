@@ -1,0 +1,46 @@
+
+Этот каталог предназначен для конкретных (частных) библиотек проекта.
+PlatformIO скомпилирует их в статические библиотеки и свяжет с исполняемым файлом.
+
+Исходный код каждой библиотеки должен быть помещен в отдельный отдельный каталог.
+("lib / your_library_name / [вот исходные файлы]").
+
+Например, посмотрите структуру следующих двух библиотек `Foo` и` Bar`:
+
+| --lib
+| |
+| | --Bar
+| | | --docs
+| | | --examples
+| | | --src
+| | | - Bar.c
+| | | - Bar.h
+| | | - library.json (необязательно, настраиваемые параметры сборки и т. д.) https://docs.platformio.org/page/librarymanager/config.html
+| |
+| | --Foo
+| | | - Foo.c
+| | | - Foo.h
+| |
+| | - README -> ЭТОТ ФАЙЛ
+|
+| - platformio.ini
+| --src
+   | - main.c
+
+и содержимое src / main.c:
+`` ''
+#include <Foo.h>
+#include <Bar.h>
+
+int main (void)
+{
+  ...
+}
+
+`` ''
+
+PlatformIO Library Dependency Finder найдет автоматически зависимые
+библиотеки, проверяющие исходные файлы проекта.
+
+Дополнительная информация о поисковике зависимостей библиотеки PlatformIO
+- https://docs.platformio.org/page/librarymanager/ldf.html
