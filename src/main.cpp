@@ -1,12 +1,20 @@
 #include <Arduino.h>
 
+const int _pin = 13;
+const int _delay = 500;
+
 void setup() {
-  pinMode(13, OUTPUT);
+  pinMode(_pin, OUTPUT);
+}
+
+void blink(int _pin, int _delay) {
+  digitalWrite(_pin, HIGH);   // Включаем светодиод в высоком напряжении
+  delay(_delay);              // ждём пол-секунды
+  digitalWrite(_pin, LOW);    // Отключаем светодиот
+  delay(_delay);              // ждём пол-секунды
+
 }
 
 void loop() {
-  digitalWrite(13, HIGH);   // Включаем светодиод в высоком напряжении
-  delay(500);              // ждём пол-секунды
-  digitalWrite(13, LOW);    // Отключаем светодиот
-  delay(500);              // ждём пол-секунды
+  blink(_pin, _delay);
 }
