@@ -1,11 +1,10 @@
+Этот каталог предназначен для модульного тестирования PlatformIO и тестов проекта.
 
-This directory is intended for PlatformIO Unit Testing and project tests.
+Модульное тестирование - это метод тестирования программного обеспечения, с помощью которого отдельные модули
+исходный код, наборы одного или нескольких программных модулей MCU вместе с соответствующими
+контрольные данные, процедуры использования и рабочие процедуры проверяются на
+определить, подходят ли они для использования. Модульное тестирование обнаруживает проблемы на ранней стадии
+в цикле разработки.
 
-Unit Testing is a software testing method by which individual units of
-source code, sets of one or more MCU program modules together with associated
-control data, usage procedures, and operating procedures, are tested to
-determine whether they are fit for use. Unit testing finds problems early
-in the development cycle.
-
-More information about PlatformIO Unit Testing:
+Дополнительная информация о модульном тестировании PlatformIO:
 - https://docs.platformio.org/page/plus/unit-testing.html
